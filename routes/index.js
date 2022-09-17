@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 16:49:20
+ * @LastEditTime: 2022-09-17 16:54:38
  * @Description: 
  */
 var express = require('express');
@@ -43,6 +43,7 @@ router.post('/receiveHooks', async function  (req, res, next) {
     // value: req.body?.title,
     // request: req.body?.request?.url,
   }
+  
   // https://www.blog.fugen.fun/
   let str = '- 项目名称：' + obj.project.toUpperCase() + '' + '\n' +
     '> 当前环境：' + obj.env + '' + '\n' +
