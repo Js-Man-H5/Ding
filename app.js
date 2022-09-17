@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-15 12:46:56
+ * @LastEditTime: 2022-09-17 13:27:22
  * @Description: 
  */
 var createError = require('http-errors');
@@ -48,8 +48,8 @@ var debug = require('debug')('my-application'); // debug模块
 app.set('port', process.env.PORT || 3000); // 设定监听端口
 
 //启动监听
-var server = app.listen(app.get('port'), function () {
-  debug('Express server listening on port ' + server.address().port);
-});
+// var server = app.listen(app.get('port'), function () {
+//   debug('Express server listening on port ' + server.address().port);
+// });
 // 这是 4.x 默认的配置，分离了 app 模块,将它注释即可，上线时可以重新改回来
-// module.exports = app;
+module.exports = app;

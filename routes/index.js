@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 13:21:00
+ * @LastEditTime: 2022-09-17 13:32:51
  * @Description: 
  */
 var express = require('express');
@@ -57,10 +57,8 @@ router.post('/receiveHooks', async function  (req, res, next) {
       text: str,
     }
   }
-  console.log('params',params)
   const response = await fetch(url, {method: 'POST', body: JSON.stringify(params) , headers: {'Content-Type': 'application/json;charset=utf-8'}});
   const data = await response.json();
-  console.log('data',data)
   res.send('respond with a resource');
 });
 
