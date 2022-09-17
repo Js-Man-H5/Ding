@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 13:32:51
+ * @LastEditTime: 2022-09-17 16:49:20
  * @Description: 
  */
 var express = require('express');
@@ -46,10 +46,10 @@ router.post('/receiveHooks', async function  (req, res, next) {
   // https://www.blog.fugen.fun/
   let str = '- 项目名称：' + obj.project.toUpperCase() + '' + '\n' +
     '> 当前环境：' + obj.env + '' + '\n' +
-    '> 错误级别：' + '<font color="red">'+ obj.level + '</font>' + '\n' +
-    '> 详情地址：' + '\n' +'*[点击查看](' + obj.url + ')' +'' + '\n' +
-    '> 错误内容：' +'<font color="red">'+ obj.value + '</font>' + '\n' +
-    '> 项目请求路径：' + '\n' + '*[点击查看](' + obj.request + ')' + ''
+    '> 错误级别：' + '<font color=red>'+ obj.level + '</font>' + '\n' +
+    '> 详情地址：' +'[点击查看](' + obj.url + ')' +'' + '\n' +
+    '> 错误内容：' +'<font color=red>'+ obj.value + '</font>' + '\n' +
+    '> 项目请求路径：' + '\n' + '[点击查看](' + obj.request + ')' + ''
   let params = {
     msgtype: "markdown",
     markdown: {
