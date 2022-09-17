@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 17:26:11
+ * @LastEditTime: 2022-09-17 17:39:26
  * @Description: 
  */
 var express = require('express');
@@ -49,11 +49,11 @@ router.post('/receiveHooks', async function  (req, res, next) {
 
 > 当前环境：${obj.env.toUpperCase()}
   
-> 错误级别：<font color='#660000'>${obj.level}</font>
+> 错误级别：<font color='#dd0000'>${obj.level}</font>
 
 > 详情地址：[点击查看](${obj.url})
 
-> 错误内容：<font color='#660000'>${obj.value}</font>
+> 错误内容：<font color='#dd0000'>${obj.value}</font>
 
 > 项目请求路径：[点击查看](${obj.request})`
   let params = {
