@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 16:58:35
+ * @LastEditTime: 2022-09-17 17:03:48
  * @Description: 
  */
 var express = require('express');
@@ -45,11 +45,12 @@ router.post('/receiveHooks', async function  (req, res, next) {
   }
   
   // https://www.blog.fugen.fun/
-  let str = '> 项目名称：' + obj.project.toUpperCase() + '' + '<br>' +
-    '> 当前环境：' + obj.env + '' + '<br>' +
-    '> 错误级别：' + '<font color=red>'+ obj.level + '</font>' + '<br>' +
+  let str =
+    '> 项目名称：' + obj.project.toUpperCase() + '' + '  '
+    '> 当前环境：' + obj.env + '' + '  ' +
+    '> 错误级别：' + '<font color=red>'+ obj.level + '</font>' + '  ' +
     '> 详情地址：' +'[点击查看](' + obj.url + ')' +'' + '<br>' +
-    '> 错误内容：' +'<font color=red>'+ obj.value + '</font>' + '<br>' +
+    '> 错误内容：' +'<font color=red>'+ obj.value + '</font>' + '  ' +
     '> 项目请求路径：' + '[点击查看](' + obj.request + ')' + ''
   let params = {
     msgtype: "markdown",
