@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-08-27 12:15:55
- * @LastEditTime: 2022-09-17 13:27:22
+ * @LastEditTime: 2022-11-03 15:08:28
  * @Description: 
  */
 var createError = require('http-errors');
@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyparser = require('body-parser');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
 const json = express.json({type: '*/json'});
 var app = express();
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(json)
 app.use(bodyparser.urlencoded({extended:false}))
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
